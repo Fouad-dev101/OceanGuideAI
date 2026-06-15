@@ -15,9 +15,9 @@ Application web d’identification d’espèces marines (poissons, crustacés, m
 - Hébergement : PythonAnywhere
 
 ## Installation locale
-``bash
-git clone https://github.com/Fouaddev101/OceanGuideAI.git
-cd OceanGuideAI
-python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate sur Windows
-pip install -r requirements.txt
+# bash:
+* git clone https://github.com/Fouaddev101/OceanGuideAI.git
+* cd OceanGuideAI
+* python -m venv venv
+* source venv/bin/activate  # ou venv\Scripts\activate sur Windows
+* pip install -r requirements.txt
