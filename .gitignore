@@ -1,0 +1,19 @@
+# Fichier contenant les clés secrètes
+.env
+
+# Dossiers Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnement virtuel (si tu en avais un localement)
+venv/
+env/
+ENV/
+
+# Fichiers d’IDE (optionnel)
+.vscode/
+.idea/
+
+# Base de données vectorielle (si utilisée)
+vectordb/

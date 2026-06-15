@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Guide AI</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="ocean-bg" id="oceanBg"></div>
+
+<div class="app">
+
+  <!-- ═══════════════ LEFT PANEL ═══════════════ -->
+  <div class="left-panel">
+
+    <div class="logo">
+      <h1>Ocean <span>Guide</span> AI</h1>
+      <p>ENCYCLOPÉDIE MARINE · FAO ASFIS 2025 · 13 708 ESPÈCES</p>
+    </div>
+
+    <div class="panel-tabs">
+      <button class="pt active" id="tab-search-btn" onclick="switchTab('search')">🔍 Recherche</button>
+      <button class="pt"        id="tab-chat-btn"   onclick="switchTab('chat')">🤖 IA Chat</button>
+    </div>
+
+    <!-- ── SEARCH PANEL ── -->
+    <div class="panel-section" id="panel-search">
+      <span class="section-label">Nom scientifique ou commun</span>
+      <div class="search-wrap">
+        <span class="search-ico">⚓</span>
+        <input type="text" id="searchInput"
+               placeholder="Ex: thon, Amphiprion, clownfish…"
+               autocomplete="off">
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+      <p class="hint">Recherche instantanée dans la base FAO. Appuyez sur Entrée pour valider.</p>
+
+      <div class="quick-section">
+        <span class="section-label">Espèces populaires</span>
+        <div class="quick-btns" id="quickBtns"></div>
+      </div>
+    </div>
+
+    <!-- ── CHAT PANEL ── -->
+    <div class="panel-section chat-panel" id="panel-chat" style="display:none;">
+      <div class="chat-area" id="chatArea"></div>
+      <div class="chat-input-row">
+        <textarea class="chat-input" id="chatInput"
+                  placeholder="Décris l'espèce… couleur, taille, habitat…"
+                  rows="1"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendChat()">➤</button>
+      </div>
+    </div>
+
+  </div><!-- /left-panel -->
+
+  <!-- ═══════════════ RIGHT PANEL ═══════════════ -->
+  <div class="right-panel" id="rightPanel">
+    <div class="empty-state">
+      <div class="empty-icon">🌊</div>
+      <h2>Explorez l'océan</h2>
+      <p>Recherchez une espèce par nom ou décrivez-la à l'IA pour l'identifier automatiquement.</p>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
